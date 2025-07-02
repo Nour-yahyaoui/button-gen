@@ -10,7 +10,6 @@ export default function Editor() {
   })
 
   useEffect(() => {
-    // This code runs only on the client side
     setDimensions({
       width: window.innerWidth,
       height: window.innerHeight
