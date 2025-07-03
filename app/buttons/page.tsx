@@ -90,7 +90,7 @@ export default function ButtonGallery() {
   // Function to generate pagination buttons with ellipsis
   const renderPaginationButtons = () => {
     const buttons = [];
-    const maxVisibleButtons = 5; // Maximum buttons to show without ellipsis
+    const maxVisibleButtons = 5;
 
     // Always show first page
     buttons.push(
@@ -273,8 +273,11 @@ export default function ButtonGallery() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.4 }}
-                      className="relative bg-gray-800 rounded-lg p-4 max-h-[300px] overflow-y-scroll"
+                      className="relative bg-gray-800 rounded-lg p-4 max-h-[200px] overflow-y-auto"
                     >
+                      {/* Gradient overlay to indicate scrollable content */}
+                      <div className="absolute inset-x-0 bottom-0 h-6 bg-gradient-to-t from-gray-800 to-transparent pointer-events-none rounded-b-lg"></div>
+                      
                       <pre className="text-sm overflow-x-auto">
                         <code className="text-gray-100">
                           {codeType === 'html'
