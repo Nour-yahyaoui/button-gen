@@ -75,7 +75,7 @@ export default function Hero() {
             {/* HTML & CSS */}
             <motion.div
               whileHover={{ y: -4 }}
-              className="p-4 sm:p-5 bg-white rounded-xl shadow-xs hover:shadow-sm border border-gray-100 transition-all"
+              className="p-4 sm:p-5 bg-white rounded-xl shadow-2xl shadow-gray-400 hover:shadow-2sm border border-gray-100 transition-all"
             >
               <div className="text-center">
                 <div className="text-lg sm:text-xl font-semibold text-gray-800">
@@ -95,7 +95,7 @@ export default function Hero() {
             {/* Tailwind CSS */}
             <motion.div
               whileHover={{ y: -4 }}
-              className="p-4 sm:p-5 bg-white rounded-xl shadow-xs hover:shadow-sm border border-gray-100 transition-all"
+              className="p-4 sm:p-5 bg-white rounded-xl shadow-2xl shadow-gray-400 hover:shadow-2sm border border-gray-100 transition-all"
             >
               <div className="text-center">
                 <div className="text-lg sm:text-xl font-semibold text-gray-800">
@@ -122,20 +122,24 @@ export default function Hero() {
           >
             <Link
               href="/buttons"
-              className="w-full sm:w-auto flex items-center justify-center gap-x-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors"
+              className="w-full sm:w-auto flex items-center justify-center gap-x-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-95 active:bg-indigo-700 group"
             >
-              Browse Components
-              <ArrowRight className="h-4 w-4" />
+              <span className="group-hover:translate-x-0.5 transition-transform duration-200">
+                Browse Components
+              </span>
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
 
             <Link
               href="https://github.com/nour-yahyaoui/button-gen"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto flex items-center justify-center gap-x-2 rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 transition-colors"
+              className="w-full sm:w-auto flex items-center justify-center gap-x-2 rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-95 active:bg-gray-800 group"
             >
-              <Github className="h-4 w-4" />
-              Star on GitHub
+              <Github className="h-4 w-4 group-hover:scale-110 transition-transform duration-200" />
+              <span className="group-hover:translate-x-0.5 transition-transform duration-200">
+                Star on GitHub
+              </span>
             </Link>
           </motion.div>
         </div>
